@@ -1,0 +1,52 @@
+.edit_img_mota{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px 0 0 10px;
+}
+
+.edit_img_daidien{
+    margin: 0 0 0 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.custom_op_file {
+    width: 200px;
+}
+
+.edit_768_option_excel{
+    margin: -30px 0 0 370px;
+}
+
+.edit_768_export_excel{
+    margin: -37px 0 0 240px;
+}
+
+.edit_768_link_excel{
+    margin: -20px 0 0 600px;
+}
+
+
+@media (max-width: 768px) {
+
+    .edit_768_backgroud{
+        padding: 20px 17px;
+    }
+
+    .edit_768_option_excel{
+        margin: 10px 0 0 0px;
+    }
+
+    .edit_768_export_excel{
+        margin: -33px 0 0 230px;
+    }
+
+    .edit_768_link_excel{
+        margin: 20px 0 -10px 60px;
+    }
+
+}
+
+

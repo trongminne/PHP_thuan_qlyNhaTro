@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule "nha-tro-sinh-vien-dai-hoc-sao-do.html" "index.php"
+RewriteRule "danh-sach-nha-tro-dai-hoc-sao-do.html" "./nhatro.php"
+RewriteRule "dang-nhap-nha-tro-dai-hoc-sao-do.html" "./login/login.php"
+RewriteRule "dang-ki-nha-tro-dai-hoc-sao-do.html" "./login/dangki.php"
+
+RewriteRule ^nha-tro-(.+)\.html$ timkiem.php?key=$1 [L]
+
+RewriteRule "^(.*)-khu-vuc-(.*).html$" "./khuvuc.php?id=$1&tenkhuvuc=$2"
+RewriteRule "^(.*)-nha-tro-(.*).html$" "./product/product-view.php?id=$1&ten=$2"

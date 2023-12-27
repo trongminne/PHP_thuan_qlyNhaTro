@@ -1,0 +1,303 @@
+
+
+.rating {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #ffc73a;
+  --fill: #ffc73a;
+  position: absolute;
+  z-index: 999;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 3rem;
+  height: 3rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+/* bình luận */
+.navbar-nav {
+  width: 100%;
+}
+
+@media(min-width:568px) {
+  .end {
+      margin-left: auto;
+  }
+}
+
+@media(max-width:768px) {
+  #post {
+      width: 100%;
+  }
+}
+
+#clicked {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: center;
+  width: 100%;
+  background-color: #ecb21f;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 13px;
+}
+
+#profile {
+  background-color: unset;
+
+}
+
+#post {
+  margin: 10px;
+  padding: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  background-color: #ecb21f;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 13px;
+  width: 50%;
+}
+
+body {
+  background-color: black;
+}
+
+#nav-items li a,
+#profile {
+  text-decoration: none;
+  color: rgb(224, 219, 219);
+  background-color: black;
+}
+
+
+.comments {
+  margin-top: 5%;
+  margin-left: 20px;
+}
+
+.darker {
+  border: 1px solid #ecb21f;
+  background-color: black;
+  float: right;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.comment {
+  border: 1px solid rgba(16, 46, 46, 1);
+  background-color: rgba(16, 46, 46, 0.973);
+  float: left;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 10px;
+
+}
+
+.comment h4,
+.comment span,
+.darker h4,
+.darker span {
+  display: inline;
+}
+
+.comment p,
+.comment span,
+.darker p,
+.darker span {
+  color: rgb(184, 183, 183);
+}
+
+h1,
+h4 {
+  color: white;
+  font-weight: bold;
+}
+
+label {
+  color: rgb(212, 208, 208);
+}
+
+#align-form {
+  margin-top: 20px;
+}
+
+.form-group p a {
+  color: white;
+}
+
+#checkbx {
+  background-color: black;
+}
+
+#darker img {
+  margin-right: 15px;
+  position: static;
+}
+
+/* Custom thanh srcoll bình luận */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0;  /* Độ rộng của thanh cuộn ngang */
+}
+
+/* Hiện thị ảnh + video */
+.image-upload-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-upload-container img {
+  max-width: 200px;
+  max-height: 150px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+#previewImage {
+  display: none;
+  max-width: 200px;
+}
+
+#previewImage1 {
+  display: none;
+  max-width: 200px;
+}
+
+/* custom button đặt phòng */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+button:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+
+button svg {
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.play {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+}
+
+button:hover svg {
+    transform: scale(3) translate(50%);
+}
+
+.now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+button:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}

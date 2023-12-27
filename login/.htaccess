@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule "dang-nhap-nha-tro-dai-hoc-sao-do.html" "login.php"
+

@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule "^(.*)-khu-vuc-(.*).html$" "./khuvuc.php?id=$1&tenkhuvuc=$2"
+RewriteRule "^(.*)-nha-tro-(.*).html$" "./product/product-view.php?id=$1&ten=$2"
